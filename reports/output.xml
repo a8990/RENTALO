@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.9 on win32)" generated="20201125 13:28:28.763" rpa="false">
+<suite id="s1" name="RENTALO" source="D:\Projects\Automation\Robot Framewrok\RENTALO\tests\RENTALO.robot">
+<test id="s1-t1" name="RENTALO WebSite carga de pagina principal">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201125 13:28:29.080" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201125 13:28:29.080" endtime="20201125 13:28:32.657"></status>
+</kw>
+<status status="PASS" starttime="20201125 13:28:29.080" endtime="20201125 13:28:32.658"></status>
+</kw>
+<kw name="Busqueda de Maquinarias" library="RENTALOApp">
+<kw name="Cargar Homepage" library="LandingPage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20201125 13:28:32.660" level="INFO">Opening url 'https://rentalo.com.mx/'</msg>
+<status status="PASS" starttime="20201125 13:28:32.660" endtime="20201125 13:28:33.582"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201125 13:28:33.583" endtime="20201125 13:28:35.755"></status>
+</kw>
+<status status="PASS" starttime="20201125 13:28:32.659" endtime="20201125 13:28:35.756"></status>
+</kw>
+<kw name="Homepage cargada" library="LandingPage">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${LANDING_PAGE_TERM}</arg>
+</arguments>
+<status status="PASS" starttime="20201125 13:28:35.757" endtime="20201125 13:28:35.782"></status>
+</kw>
+<status status="PASS" starttime="20201125 13:28:35.756" endtime="20201125 13:28:35.782"></status>
+</kw>
+<kw name="Ir a la Barra de Busqueda" library="LandingPage">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/section[1]/div/div/div/div[1]/input</arg>
+</arguments>
+<msg timestamp="20201125 13:28:35.785" level="INFO">Clicking element 'xpath=/html/body/div/div/section[1]/div/div/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20201125 13:28:35.784" endtime="20201125 13:28:35.847"></status>
+</kw>
+<status status="PASS" starttime="20201125 13:28:35.783" endtime="20201125 13:28:35.847"></status>
+</kw>
+<kw name="Ir a Seccion Categorias" library="LandingPage">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/section[2]/h2</arg>
+</arguments>
+<msg timestamp="20201125 13:28:35.873" level="INFO">Element 'xpath=/html/body/div/div/section[2]/h2' is displayed.</msg>
+<status status="PASS" starttime="20201125 13:28:35.848" endtime="20201125 13:28:35.873"></status>
+</kw>
+<status status="PASS" starttime="20201125 13:28:35.847" endtime="20201125 13:28:35.873"></status>
+</kw>
+<kw name="Seleccionar Categoria Equipo Mueve Tierra" library="LandingPage">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/section[2]/div/a[1]/div[1]</arg>
+</arguments>
+<msg timestamp="20201125 13:28:35.895" level="INFO">Element 'xpath=/html/body/div/div/section[2]/div/a[1]/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20201125 13:28:35.874" endtime="20201125 13:28:35.896"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/section[2]/div/a[1]/div[1]</arg>
+</arguments>
+<msg timestamp="20201125 13:28:35.896" level="INFO">Clicking element 'xpath=/html/body/div/div/section[2]/div/a[1]/div[1]'.</msg>
+<status status="PASS" starttime="20201125 13:28:35.896" endtime="20201125 13:28:35.938"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${LANDING_PAGE_MUEVE_TIERRA}</arg>
+</arguments>
+<status status="PASS" starttime="20201125 13:28:35.938" endtime="20201125 13:28:36.439"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/section/div[2]/h1</arg>
+</arguments>
+<msg timestamp="20201125 13:28:36.469" level="INFO">Element 'xpath=//*[@id="app"]/section/div[2]/h1' is displayed.</msg>
+<status status="PASS" starttime="20201125 13:28:36.439" endtime="20201125 13:28:36.469"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${LANDING_PAGE_FILTRAR}</arg>
+</arguments>
+<status status="PASS" starttime="20201125 13:28:36.470" endtime="20201125 13:28:36.720"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201125 13:28:37.061" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201125 13:28:36.720" endtime="20201125 13:28:37.061"></status>
+</kw>
+<status status="PASS" starttime="20201125 13:28:35.873" endtime="20201125 13:28:37.061"></status>
+</kw>
+<status status="PASS" starttime="20201125 13:28:32.659" endtime="20201125 13:28:37.061"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201125 13:28:37.063" endtime="20201125 13:28:39.354"></status>
+</kw>
+<status status="PASS" starttime="20201125 13:28:37.062" endtime="20201125 13:28:39.355"></status>
+</kw>
+<tags>
+<tag>Current</tag>
+</tags>
+<status status="PASS" starttime="20201125 13:28:29.079" endtime="20201125 13:28:39.357" critical="yes"></status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" starttime="20201125 13:28:28.766" endtime="20201125 13:28:39.402"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Current</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="RENTALO">RENTALO</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20201125 13:28:29.040" level="ERROR">Error in file 'D:\Projects\Automation\Robot Framewrok\RENTALO\Resources\RENTALOApp.robot' on line 3: Resource file '..\Resources\PO\BecomeHost.robot' does not exist.</msg>
+<msg timestamp="20201125 13:28:29.042" level="ERROR">Error in file 'D:\Projects\Automation\Robot Framewrok\RENTALO\Resources\RENTALOApp.robot' on line 4: Resource file 'Resources\PO\TopNav.robot' does not exist.</msg>
+<msg timestamp="20201125 13:28:29.055" level="ERROR">Error in file 'D:\Projects\Automation\Robot Framewrok\RENTALO\Resources\RENTALOApp.robot' on line 5: Resource file '..\Resources\PO\SearchResults.robot' does not exist.</msg>
+<msg timestamp="20201125 13:28:29.058" level="ERROR">Error in file 'D:\Projects\Automation\Robot Framewrok\RENTALO\Resources\RENTALOApp.robot' on line 6: Resource file 'Resources\PO\Product.robot' does not exist.</msg>
+<msg timestamp="20201125 13:28:29.060" level="ERROR">Error in file 'D:\Projects\Automation\Robot Framewrok\RENTALO\Resources\RENTALOApp.robot' on line 7: Resource file 'Resources\PO\Cart.robot' does not exist.</msg>
+<msg timestamp="20201125 13:28:29.063" level="ERROR">Error in file 'D:\Projects\Automation\Robot Framewrok\RENTALO\Resources\RENTALOApp.robot' on line 8: Resource file '..\Resources\PO\SignIn.robot' does not exist.</msg>
+<msg timestamp="20201125 13:28:29.064" level="ERROR">Error in file 'D:\Projects\Automation\Robot Framewrok\RENTALO\Resources\RENTALOApp.robot' on line 9: Resource file '..\Resources\PO\EventCalendar.robot' does not exist.</msg>
+</errors>
+</robot>
